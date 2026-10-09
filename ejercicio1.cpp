@@ -2,14 +2,14 @@
 #include <string>
 #include <iostream>
 #include <limits>
+#include <cstdint>
 #include "tads/AvlImp.cpp"
 
 int main()
 {
     int cantidadOperaciones;
     std::cin >> cantidadOperaciones;
-
-    AVLImp<long long> monedas;
+    AVLImp<std::int64_t> monedas;
     AVLImp<std::string> pinturas;
 
     for (int i = 0; i < cantidadOperaciones; i++)
@@ -24,7 +24,7 @@ int main()
             if (coleccion == 'M')
             {
 
-                long long catalogo;
+                std::int64_t catalogo;
                 std::cin >> catalogo;
                 monedas.insertar(catalogo);
             }
@@ -40,7 +40,7 @@ int main()
         {
             if (coleccion == 'M')
             {
-                long long catalogo;
+                std::int64_t catalogo;
                 std::cin >> catalogo;
                 if (monedas.buscar(catalogo) == true)
                 {
@@ -69,9 +69,9 @@ int main()
         {
             if (coleccion == 'M')
             {
-                long long desde, hasta;
+                std::int64_t desde, hasta;
                 std::cin >> desde >> hasta;
-                for (long long i = desde; i <= hasta; i++)
+                for (std::int64_t i = desde; i <= hasta; i++)
                 {
                     if (monedas.buscar(i) == true)
                     {
@@ -83,10 +83,10 @@ int main()
             {
                 std::string desde, hasta;
                 std::cin >> desde >> hasta;
-                List<std::string> resultado = pinturas.rango(desde, hasta);
-                for (int i = 0; i < resultado.getSize(); i = i + 1)
+                List<std::string>* resultado = pinturas.rango(desde, hasta);
+                for (int i = 0; i < resultado->getSize(); i = i + 1)
                 {
-                    std::cout << resultado.get(i) << std::endl;
+                    std::cout << resultado->get(i) << std::endl;
                 }
             }
         }

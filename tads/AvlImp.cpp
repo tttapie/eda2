@@ -157,12 +157,11 @@ public: // desde aca, lo que se ve desde afuera
             return buscarEnAvl(node->right, elem);
     }
 
-    List<T> rango(T desde, T hasta)
+    List<T>* rango(T desde, T hasta)
     {
-
         ListImp<T> *registro = new ListImp<T>();
         rangoEnAvl(root, desde, hasta, *registro);
-        return *registro;
+        return registro;
     }
 
     void rangoEnAvl(Node *node, T desde, T hasta, ListImp<T> &registro)
