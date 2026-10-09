@@ -8,7 +8,7 @@
 > con comentarios en el código fuente. La omisión de fuentes puede considerarse plagio.
 
 ## Ejercicio 1
-Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estructuras
+Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estructuras de la implementacion de listas y utilizamos claude y copilot
 
 ## Ejercicio 2
 - Implementación íntegramente propia, sin fuentes externas.
