@@ -11,7 +11,12 @@
 
 ## 2026-09-21— En conjunto
 - Leimos la letra, implementamos Avl con ayuda del material de las presentaciones, no terminamos el ejercicio 1.
+<<<<<<< HEAD
 A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que iba a ser parecido a buscar, pero la estrategia no funciono y tuvimos que cambiar a un  un recorrido in-order.
+=======
+A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que iba a ser parecido a buscar, pero la estrategia no funciono y tuvimos que cambiar
+a un  un recorrido in-order.
+>>>>>>> e4b3ec207b250efe35c3033ea1c2c1e87976b706
 
 ## 2026-10-09- En conjunto
 - Terminamos el ejercicio 1, resolviendo los ultimos errores que teniamos. Utilizamos copilot para esto, ya que habian muchos errores que no sabiamos corregir, muchos de los cuales eran errores con "*"
