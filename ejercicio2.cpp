@@ -7,6 +7,8 @@ using namespace std;
 
 int main()
 {
-    // TODO
+    int cantidadPalabras;
+    std::cin >> cantidadPalabras;
+    
     return 0;
 }

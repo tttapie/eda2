@@ -8,7 +8,7 @@
 > con comentarios en el código fuente. La omisión de fuentes puede considerarse plagio.
 
 ## Ejercicio 1
-- Implementación íntegramente propia, sin fuentes externas.
+Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estructuras
 
 ## Ejercicio 2
 - Implementación íntegramente propia, sin fuentes externas.
