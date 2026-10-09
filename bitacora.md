@@ -9,9 +9,10 @@
 > abiertas. Si se usó IA ese día, indicar herramienta, consulta y qué se hizo con la
 > respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
 
-## AAAA-MM-DD — Nombre
-- Ejemplo: Leí la letra del ejercicio 1. Primera idea: ... pero la restricción de
-  complejidad pide ..., así que ...
+## 2026-09-21— En conjunto
+- Leimos la letra, implementamos Avl con ayuda del material de las presentaciones, no terminamos el ejercicio 1.
+A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que iba a ser parecido a buscar, pero la estrategia no funciono y tuvimos que cambiar
+a un  un recorrido in-order.
 
 ## AAAA-MM-DD — En conjunto
 - Ejemplo: Implementamos ... Bug: ... Lo corregimos ...
