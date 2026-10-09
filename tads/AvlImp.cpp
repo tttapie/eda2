@@ -2,7 +2,7 @@
 #define AVL_IMP // ...la defino ahora (include guard: evita incluir 2 veces)
 
 #include "AVL.h"   // trae la interfaz base AVL<T> que esta clase implementa
-#include "List.h"  // trae la interfaz de listas List<T>
+#include "ListImp.cpp"  // trae la implementacion de listas ListImp<T>
 #include <cassert> // trae assert(...) para chequear condiciones en ejecucion
 #include <algorithm>
 
@@ -125,14 +125,14 @@ public: // desde aca, lo que se ve desde afuera
         return x;
     }
 
-    int *height(Node *node)
+    int height(Node *node)
     {
         if (node == NULL)
             return 0;
         return node->height;
     }
 
-    int *getBalance(Node *node)
+    int getBalance(Node *node)
     {
         if (node == NULL)
             return 0;
@@ -157,7 +157,7 @@ public: // desde aca, lo que se ve desde afuera
             return buscarEnAvl(node->right, elem);
     }
 
-    List<T>* rango(T desde, T hasta)
+    List<T> *rango(T desde, T hasta)
     {
         ListImp<T> *registro = new ListImp<T>();
         rangoEnAvl(root, desde, hasta, *registro);
@@ -169,7 +169,7 @@ public: // desde aca, lo que se ve desde afuera
         if (node == NULL)
             return ;
 
-        if (node->element > hasta)
+        if (node->element > desde)
         {
             rangoEnAvl(node->left, desde, hasta, registro);
         }
@@ -179,7 +179,7 @@ public: // desde aca, lo que se ve desde afuera
             registro.insert(node->element);
         }
 
-        if (node->element < desde)
+        if (node->element < hasta)
         {
             rangoEnAvl(node->right, desde, hasta, registro);
         }

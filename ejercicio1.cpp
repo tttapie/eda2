@@ -71,19 +71,18 @@ int main()
             {
                 std::int64_t desde, hasta;
                 std::cin >> desde >> hasta;
-                for (std::int64_t i = desde; i <= hasta; i++)
+                List<std::int64_t> *resultado = monedas.rango(desde, hasta); //devuelve solo las monedas que realmente estan guardadas dentro del rango
+
+                for (int i = 0; i < resultado->getSize(); i++)
                 {
-                    if (monedas.buscar(i) == true)
-                    {
-                        std::cout << i << std::endl;
-                    }
-                }
+                    std::cout << resultado->get(i) << std::endl; //resultado->get(i) obtiene el elemento que esta en la posicion i de la lista
+                } //Imprime ese elemento y baja una línea
             }
             else if (coleccion == 'P')
             {
                 std::string desde, hasta;
                 std::cin >> desde >> hasta;
-                List<std::string>* resultado = pinturas.rango(desde, hasta);
+                List<std::string> *resultado = pinturas.rango(desde, hasta);
                 for (int i = 0; i < resultado->getSize(); i = i + 1)
                 {
                     std::cout << resultado->get(i) << std::endl;
