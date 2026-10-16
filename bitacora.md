@@ -18,6 +18,6 @@ A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que ib
 
 - Comenzamos a implementar hash para el ejercicio 2 , las ideas que tuvimos para la implementacion es un array de listas que las listas guarden, la cantidad de palabras registradas por un cajon en especifico y un array de 26 espacios en 0 que cada uno representa una letra y se guarda un numero representando la cantidad de veces que aparece esa letra en el cajon de palabras, nuestra primera idea de funcion de hash fue sumar los valores ascii de cada letra de la palabra, esta idea siempre da numeros muy chicos , la distribucion va a ser mala y las listas quedan largas.
 
-## AAAA-MM-DD — En conjunto
-- Ejemplo: Implementamos ... Bug: ... Lo corregimos ...
-- Pasan los casos de prueba 1 a 4 del ejercicio 1.
+## 2026-10-16- En conjunto
+- Implementamos todo el ejercicio 2, terminamos apoyandonos en claude para la funcion de hash
+- La prueba de 100 pasa

@@ -2,8 +2,8 @@
 #define Hash_IMP
 
 #include "Hash.h"
-#include "ListImp.cpp"
 #include <string>
+
 
 struct NodoCajon
 {
