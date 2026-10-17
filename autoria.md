@@ -11,10 +11,10 @@
 Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estructuras de la implementacion de listas y utilizamos claude y copilot
 
 ## Ejercicio 2
-- Implementación íntegramente propia, sin fuentes externas.
+- Utilizamos Claude para la funcion hash y el resto fue hecho a mano
 
 ## Ejercicio 3
-- Implementación íntegramente propia, sin fuentes externas.
+- 
 
 ## Ejercicio 4
 - Implementación íntegramente propia, sin fuentes externas.

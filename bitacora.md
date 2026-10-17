@@ -21,3 +21,7 @@ A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que ib
 ## 2026-10-16- En conjunto
 - Implementamos todo el ejercicio 2, terminamos apoyandonos en claude para la funcion de hash
 - La prueba de 100 pasa
+
+## 2026-10-17- En conjunto
+- Tuvimos la idea de usar min heap para tener los archivos mas chicos a simple alcanze, utilizamos el Minheap. Trabajamos plenamente en el arreglo ya que era mas facil hundir y flotar los datos a ingresar y borrar.  
+- Para consolidar, cargamos los tamaños en el min heap, extraemos los dos mínimos, sumamos sus tamaños, reinsertamos el archivo nuevo y sumamos el costo hasta que queda uno.

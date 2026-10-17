@@ -20,10 +20,34 @@ private:
     int cantCajones;
     int cajonGrande;
 
+    bool primo(int numero)
+    {
+        if (numero < 2)
+            return false;
+
+        for (int divisor = 2; divisor <= numero / divisor; divisor++)
+        {
+            if (numero % divisor == 0)
+                return false;
+        }
+        return true;
+    }
+
+    int sigPrimo(int numero)
+    {
+        if (numero < 2)
+            numero = 2;
+
+        while (!primo(numero))
+            numero++;
+
+        return numero;
+    }
+
 public:
     HashImp(int cantBuckets) // El constructor: se ejecuta al crear el hash, por ejemplo new HashImp<long long>(1000), y recibe el largo del array
     {
-        largo = cantBuckets;
+        largo = sigPrimo(cantBuckets);
         tabla = new NodoCajon *[largo];
         cantCajones = 0;
         cajonGrande = 0; // tiene que ser en orden O(1) lo pide la letra
