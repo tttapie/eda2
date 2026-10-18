@@ -25,3 +25,7 @@ A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que ib
 ## 2026-10-17- En conjunto
 - Tuvimos la idea de usar min heap para tener los archivos mas chicos a simple alcanze, utilizamos el Minheap. Trabajamos plenamente en el arreglo ya que era mas facil hundir y flotar los datos a ingresar y borrar.  
 - Para consolidar, cargamos los tamaños en el min heap, extraemos los dos mínimos, sumamos sus tamaños, reinsertamos el archivo nuevo y sumamos el costo hasta que queda uno.
+
+## 2026-10-18- En conjunto
+- Implementamos el ejercicio 5 entero, reutilzamos la mayor parte de la implementacion de Heap del ejercicio 3 , primero pensamos en hacer otro tad grafo, pero al final vimos que no era necesario, podiamos resolver todo en main con un array de listas con los adyacentes de cada vertice, y el heap.
+- la prueba 100 pasa 

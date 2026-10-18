@@ -14,10 +14,10 @@ Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estruct
 - Utilizamos Claude para la funcion hash y el resto fue hecho a mano
 
 ## Ejercicio 3
-- 
+- No utilizamos fuentes externas
 
 ## Ejercicio 4
-- Implementación íntegramente propia, sin fuentes externas.
+- Utilizamos Claude para el entendimiento del programa y arreglar errores minimos en el codigo 
 
 ## Ejercicio 5
 - Implementación íntegramente propia, sin fuentes externas.

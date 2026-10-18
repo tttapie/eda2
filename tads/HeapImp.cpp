@@ -12,12 +12,10 @@ class HeapImp : public Heap
 private:
     std::int64_t *array;
     std::int64_t cantElem;
-    std::int64_t largoArr;
 
 public:
     HeapImp(std::int64_t largo)
     {
-        largoArr = largo;
         cantElem = 0;
         array = new std::int64_t[largo + 1]; // lo hacemos en base 1
     }
