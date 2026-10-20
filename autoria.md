@@ -20,5 +20,5 @@ Utilizamos codigo sacado de las presentaciones dadas de clases, copiamos estruct
 - Utilizamos Claude para el entendimiento del programa y arreglar errores minimos en el codigo 
 
 ## Ejercicio 5
-- Implementación íntegramente propia, sin fuentes externas.
+- Utilizamos el pseudocodigo de kruskel de las presentaciones y utilizamos claude para problemas en la implementacion y el sort
 

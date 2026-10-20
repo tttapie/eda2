@@ -45,7 +45,7 @@ private:
     }
 
 public:
-    HashImp(int cantBuckets) // El constructor: se ejecuta al crear el hash, por ejemplo new HashImp<long long>(1000), y recibe el largo del array
+    HashImp(int cantBuckets) 
     {
         largo = sigPrimo(cantBuckets);
         tabla = new NodoCajon *[largo];
@@ -66,7 +66,7 @@ public:
     }
 
     int hashClave(int firma[26], int cantidadBuckets)  
-    { // IA: 31 mezcla los contadores segun su posicion.
+    { // FUNCION HECHA POR IA: 31 mezcla los contadores segun su posicion.
         int hash = 0;
         for (int i = 0; i < 26; i++)
         {
@@ -88,7 +88,7 @@ public:
     }
 
     bool mismaFirma(int firma1[26], int firma2[26])
-    { // comparar 2 firmas y ver si son iguales
+    { 
         for (int i = 0; i < 26; i++)
         {
             if (firma1[i] != firma2[i])

@@ -28,4 +28,8 @@ A la hora de la implementacion de Rango en Avl, comenzamos con la idea de que ib
 
 ## 2026-10-18- En conjunto
 - Implementamos el ejercicio 5 entero, reutilzamos la mayor parte de la implementacion de Heap del ejercicio 3 , primero pensamos en hacer otro tad grafo, pero al final vimos que no era necesario, podiamos resolver todo en main con un array de listas con los adyacentes de cada vertice, y el heap.
-- la prueba 100 pasa 
+- la prueba 100 pasa
+
+## 2026-10-20- En conjunto
+-Revisamos todos los ejercicio, comenzamos y terminamos el 5to ejercicio sin mayores problemas. Al tener de restriccion usar el kruskal nos basamos en eso y el pseudocodigo que se da en las presentaciones
+- la prueba 100 pasa

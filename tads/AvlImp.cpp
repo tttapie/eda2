@@ -1,33 +1,31 @@
-#ifndef AVL_IMP // si NO está definida la etiqueta AVL_IMP...
-#define AVL_IMP // ...la defino ahora (include guard: evita incluir 2 veces)
+#ifndef AVL_IMP 
+#define AVL_IMP 
 
-#include "AVL.h"   // trae la interfaz base AVL<T> que esta clase implementa
-#include "ListImp.cpp"  // trae la implementacion de listas ListImp<T>
-#include <cassert> // trae assert(...) para chequear condiciones en ejecucion
+#include "AVL.h"  
+#include "ListImp.cpp"  
+#include <cassert> 
 #include <algorithm>
 
-template <class T>           // clase generica: T puede ser long long, string, etc.
-class AVLImp : public AVL<T> // AVLImp hereda de AVL<T> (implementa sus metodos)
+template <class T>           
+class AVLImp : public AVL<T> 
 {
-private:       // desde aca, todo es privado (no se ve desde afuera)
-    class Node // clase interna: el nodo del arbol
+private:       
+    class Node 
     {
-    public: // campos public para que AVLImp los use libremente
+    public:
         T element;
         Node *left;
         Node *right;
         int height;
-        // constructor del nodo: recibe dato + los dos hijos.
-        // la lista de inicializacion (despues de los :) copia cada parametro a su campo.
-        // height arranca en 1 porque un nodo nuevo es una hoja
+      
         Node(T element, Node *left, Node *right)
             : element(element), left(left), right(right), height(1) {}
     };
 
-    Node *root; // puntero a la raiz. Si es NULL, el arbol esta vacio.
+    Node *root; 
 
-public: // desde aca, lo que se ve desde afuera
-    // constructor del arbol: arranca vacio (root en NULL)
+public: 
+
     AVLImp() : root(NULL) {}
     void insertar(T element)
     {
@@ -36,50 +34,46 @@ public: // desde aca, lo que se ve desde afuera
 
     Node *ALTA(Node *node, T element)
     {
-        /* 1. Perform the normal BST insertion */
+      
         if (node == NULL)
             return new Node(element, NULL, NULL);
         if (element < node->element)
             node->left = ALTA(node->left, element);
         else if (element > node->element)
             node->right = ALTA(node->right, element);
-        else // Equal elements are not allowed in BST
+        else 
             return node;
 
-        /* 2. Update height of this ancestor AVLnode */
+       
         node->height = 1 + std::max(height(node->left), height(node->right));
 
-        /* 3. Get the balance factor of this ancestor
-            node to check whether this node became
-            unbalanced */
+    
         int balance = getBalance(node);
 
-        // If this node becomes unbalanced, then
-        // there are 4 cases
+     
 
-        // Left Left Case
         if (balance < -1 && element < node->left->element)
             return rightRotate(node);
 
-        // Right Right Case
+
         if (balance > 1 && element > node->right->element)
             return leftRotate(node);
 
-        // Left Right Case
+        
         if (balance < -1 && element > node->left->element)
         {
             node->left = leftRotate(node->left);
             return rightRotate(node);
         }
 
-        // Right Left Case
+    
         if (balance > 1 && element < node->right->element)
         {
             node->right = rightRotate(node->right);
             return leftRotate(node);
         }
 
-        /* return the (unchanged) node pointer */
+       
         return node;
     }
 
@@ -87,12 +81,10 @@ public: // desde aca, lo que se ve desde afuera
     {
         Node *y = x->right;
         Node *T2 = y->left;
-
-        // Perform rotation
-        y->left = x;
+       y->left = x;
         x->right = T2;
 
-        // Update heights
+     
         x->height = std::max(height(x->left),
                              height(x->right)) +
                     1;
@@ -100,7 +92,6 @@ public: // desde aca, lo que se ve desde afuera
                              height(y->right)) +
                     1;
 
-        // Return new root
         return y;
     }
 
@@ -109,11 +100,11 @@ public: // desde aca, lo que se ve desde afuera
         Node *x = y->left;
         Node *T2 = x->right;
 
-        // Perform rotation
+       
         x->right = y;
         y->left = T2;
 
-        // Update heights
+     
         y->height = std::max(height(y->left),
                              height(y->right)) +
                     1;
@@ -121,7 +112,7 @@ public: // desde aca, lo que se ve desde afuera
                              height(x->right)) +
                     1;
 
-        // Return new root
+      
         return x;
     }
 
@@ -186,4 +177,4 @@ public: // desde aca, lo que se ve desde afuera
     }
 };
 
-#endif // cierra el include guard abierto arriba
+#endif
